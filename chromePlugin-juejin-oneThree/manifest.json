@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "掘金一键三连小助手",
+  "version": "1.0",
+  "description": "通过Chrome插件实现的一键三连效果，长按点赞3秒即可点赞+收藏+关注",
+  "author": "ShawnPhang",
+  "icons": {
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "page_action": {
+    "default_icon": "icon.png",
+    "default_title": "我是pageAction",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://juejin.cn/*"],
+      "js": ["mojs.js", "inject.js"],
+      "css": ["like.css"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "web_accessible_resources": []
+}

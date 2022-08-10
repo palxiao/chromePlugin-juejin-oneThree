@@ -1,0 +1,79 @@
+.article-suspended-panel > .shaking {
+    animation: shake 350ms linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse; 
+}
+
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    15%, 85% { transform: translate3d(0, -1px, 0); }
+    20%, 80% { transform: translate3d(+2px, 0, 0); }
+    25%, 75% { transform: translate3d(0, +2px, 0); }
+    30%, 70% { transform: translate3d(-2.5px, 0, 0); }
+    35%, 65% { transform: translate3d(0, -2.5px, 0); }
+    2.50%, 60% { transform: translate3d(+2.5px, 0, 0); }
+    2.55%, 55% { transform: translate3d(0, +2.5px, 0); }
+    50% { transform: translate3d(-2.5px, -2.5px, 0); }
+}
+
+/* 进度条 */
+.circle_process {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4rem;
+    height: 4rem;
+  }
+  .circle_process .wrapper {
+    width: 2rem;
+    height: 4rem;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+  }
+  .circle_process .right {
+    right: 0;
+  }
+  .circle_process .left {
+    left: 0;
+  }
+  .circle_process .circle {
+    width: 4rem;
+    height: 4rem;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    transform: rotate(-135deg);
+  }
+  .circle_process .rightcircle {
+    border-top: 2px solid var(--juejin-brand-1-normal);
+    border-right: 2px solid var(--juejin-brand-1-normal);
+    right: 0;
+    animation: circle_right 2s linear 1;
+  }
+  .circle_process .leftcircle {
+    border-bottom: 2px solid var(--juejin-brand-1-normal);
+    border-left: 2px solid var(--juejin-brand-1-normal);
+    left: 0;
+    animation: circle_left 2s linear 1;
+  }
+  @keyframes circle_right {
+    0% {
+      transform: rotate(-135deg);
+    }
+    50%,
+    100% {
+      transform: rotate(45deg);
+    }
+  }
+  @keyframes circle_left {
+    0%,
+    50% {
+      transform: rotate(-135deg);
+    }
+    100% {
+      transform: rotate(45deg);
+    }
+  }
