@@ -4,13 +4,6 @@
   //   script.src = 'https://cdn.jsdelivr.net/npm/@mojs/core@1.3.0/dist/mo.umd.min.js'
   //   document.getElementsByTagName('head')[0].appendChild(script)
 
-  function like() {
-    const $collectBtn = document.querySelectorAll('.article-suspended-panel .panel-btn')[0]
-    if (!$collectBtn.className.includes('active')) {
-      $collectBtn?.click()
-    }
-  }
-
   function follow() {
     const $followBtn = document.querySelector('.article-area .follow-button')
     try {
