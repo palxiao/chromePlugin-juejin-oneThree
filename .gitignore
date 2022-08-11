@@ -2,6 +2,7 @@
 */.DS_Store
 node_modules
 *.pem
+chromePlugin-juejin-oneThree.pem
 
 # Log files
 npm-debug.log*
