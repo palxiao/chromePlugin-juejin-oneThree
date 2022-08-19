@@ -100,11 +100,11 @@
     document.getElementsByClassName('panel-btn')[0].appendChild(doms[0])
     document.getElementsByClassName('panel-btn')[2].appendChild(doms[1])
     timer = setTimeout(() => {
-      press = false
       done()
     }, 2000)
   })
-  likeBtn?.addEventListener('mouseup', () => {
+
+  window.addEventListener('mouseup', () => {
     clearTimeout(timer)
     if (press === false) {
       return
